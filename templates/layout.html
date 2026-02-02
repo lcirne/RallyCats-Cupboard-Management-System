@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rally Cat's Cupboard</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/add.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/inventory.css') }}">
+
+</head>
+<body class="body">
+<div id="main_title">
+    <h1>Rally Cat's Cupboard Inventory</h1>
+</div>
+<div id="content">
+    <h2>{{ page_title }}</h2>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

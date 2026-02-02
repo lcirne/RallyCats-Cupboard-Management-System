@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block content %}
+<a href="{{ url_for('dashboard') }}">Check Dashboard</a>
+
+<link rel="stylesheet" href="../static/styles/add.css">
+
+<form method="POST" action="{{ url_for('add') }}">
+  <section class="add_form">
+    <div class="item_name">
+    <label for="name" class="Form_Label">Name</label>
+        <br>
+    <input type="text" name="name" id="name" required />
+    </div>
+    <div class="item_category">
+    <label for="category" class="Form_Label">Category</label>
+        <br>
+    <input type="text" name="category" id="category" required />
+    </div>
+    <div class="item_quantity">
+    <label for="amount" class="Form_Label">Amount</label>
+        <br>
+    <input type="number" name="amount" id="amount" required />
+    </div>
+    
+
+    <div class="CheckBoxArray item_diet">
+        <label class="Form_Label">Dietary Restrictions</label>
+        <br>
+        <label for="kosher">Kosher</label>
+        <input type="checkbox" id="kosher" name="dietary_restrictions" value="kosher" />
+        <br>
+        <label for="halal">Halal</label>
+        <input type="checkbox" id="halal" name="dietary_restrictions" value="halal" />
+        <br>
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="vegetarian" name="dietary_restrictions" value="vegetarian" />
+        <br>
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" id="vegan" name="dietary_restrictions" value="vegan" />
+    </div>
+    <!--
+    <div class="CheckBoxArray item_allergens">
+    <h4 class="Form_Label">Allergens</h4>
+    <label for="dairy">Dairy</label>
+    <input type="checkbox" id="dairy" name="allergens" value="dairy" />
+    <label for="eggs">Eggs</label>
+    <input type="checkbox" id="eggs" name="allergens" value="eggs" />
+    <label for="fish">Fish</label>
+    <input type="checkbox" id="fish" name="allergens" value="fish" />
+    <label for="shellfish">Shellfish</label>
+    <input type="checkbox" id="shellfish" name="allergens" value="shellfish" />
+    <label for="tree_nuts">Tree Nuts</label>
+    <input type="checkbox" id="tree_nuts" name="allergens" value="tree_nuts" />
+    <label for="peanuts">Peanuts</label>
+    <input type="checkbox" id="peanuts" name="allergens" value="peanuts" />
+    <label for="wheat">Wheat</label>
+    <input type="checkbox" id="wheat" name="allergens" value="wheat" />
+    <label for="soybeans">Soybeans</label>
+    <input type="checkbox" id="soybeans" name="allergens" value="soybeans" />
+    <label for="sesame">Sesame</label>
+    <input type="checkbox" id="sesame" name="allergens" value="sesame" />
+    </div>
+    -->
+    <!--
+    <div class="item_tags">
+    <label for="tags" class="Form_Label">Tags</label>
+        <br>
+        <textarea type="text" name="tags" id="tags">
+
+        </textarea>
+    </div>
+    -->
+    <div class="item_donor">
+    <label for="donor" class="Form_Label">Donor</label>
+        <br>
+    <input type="text" name="donor" id="donor" />
+    </div>
+
+    <div class="item_requested">
+    <label for="requested" class="Form_Label">Requested</label>
+    <input type="checkbox" name="requested" id="requested">
+    </div>
+    
+    
+    <div class="item_expiration">
+    <label for="expiration_date" class="Form_Label">Expiration Date</label>
+        <br>
+    <input type="date" name="expiration_date" id="expiration_date">
+    </div>
+    <div class="item_submit">
+        <br>
+    <input type="submit" value="Submit">
+    </div>
+  </section>
+
+  
+</form>
+
+
+
+{% endblock %}

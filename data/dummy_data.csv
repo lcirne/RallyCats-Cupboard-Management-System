@@ -1,0 +1,21 @@
+name,brand,quantity,category,donor,vegetarian,kosher,vegan,hallal,expiration,requested
+"Mac n' Cheese","Kraft",20,"non-perishable","Hannafords",1,0,0,0,12,0
+"White Bread","Sarah Lee",5,"grain","Hannafords",1,1,1,1,22,0
+"Black Beans","Goya",30,"non-perishable","Hannafords",1,1,1,1,22,0
+"Peanut Butter","Jif",10,"non-perishable","Hannafords",1,1,1,1,22,0
+"Spaghetti","Barilla",15,"grain","Hannafords",1,1,1,1,32,0
+"Canned Tuna","StarKist",12,"non-perishable","Hannafords",1,0,0,0,64,0
+"Brown Rice","Lundberg",25,"grain","Hannafords",1,1,1,1,26,0
+"Tomato Soup","Campbell's",18,"non-perishable","Hannafords",1,1,1,1,10,0
+"Whole Milk","Horizon",8,"dairy","Hannafords",1,1,1,1,6,0
+"Cheddar Cheese","Tillamook",10,"dairy","Hannafords",1,1,1,1,60,0
+"Chicken Noodle Soup","Progresso",20,"non-perishable","Hannafords",1,0,1,0,50,0
+"Almond Milk","Silk",14,"dairy alternative","Hannafords",1,1,1,1,35,0
+"Frozen Mixed Vegetables","Birds Eye",12,"frozen","Hannafords",1,1,1,1,50,0
+"Apples","None",30,"fresh produce","Hannafords",1,1,1,1,22,0
+"Ground Beef","None",20,"meat","Hannafords",1,0,0,0,30,0
+"Eggs","Eggland's Best",18,"dairy","Hannafords",1,1,1,1,30,0
+"Oatmeal","Quaker",22,"grain","Hannafords",1,1,1,1,40,0
+"Canned Chickpeas","Bush's",16,"non-perishable","Hannafords",1,1,1,1,30,0
+
+

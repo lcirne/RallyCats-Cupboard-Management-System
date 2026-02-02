@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--this page shows inventory and then allows the user to select plus or minus amount of the inventory -->
+<!--would we want to add a way to search the table?-->
+<a href="{{ url_for('add') }}">Add New Items</a>
+<div id="inventory_table">
+    {% if error %}
+    <p class= "error">Error: {{error}}</p>
+    {% endif %}
+    <p> Key: Red = 5 or less items
+        Yellow = 10 or less items
+        Green = 10 or more items
+    </p>
+    <table>
+        <trhead>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Category</th>
+                <th>Days Until Expiration</th>
+                <th>Donor</th>
+                <th>Requested?</th>
+        </trhead>
+        <tbody>
+        {% for row in rows %} <!--depends on how the database is setup "Mac n' Cheese","Kraft",20,"non-perishable","Hannafords",1,0,0,0,12
+        -->
+        <!-- added css to make row be red if low in stock and green if high in stock-->
+        {% if row[2] <= 5 %}
+            <tr class="low">
+        {% elif row[2]  <= 10 %}
+            <tr class="medium">
+        {% else %}
+            <tr class="high">
+        {% endif %}
+                <td>{{row[0]}}</td> <!--Item Name-->
+                <td> <!--Quantity-->
+                    <form method="POST" action="{{ url_for('dashboard') }}"id="button">
+                        <label>{{row[2]}}&nbsp;</label><input type="text" name="new_quantity">
+                        <button type="submit" value="{{row[0]}}" name="Button">Update</button> <!--How to return item name of row[0] for sql call -->
+                    </form>
+                </td> 
+                <td>{{row[3]}}</td> <!--Category-->
+                <td>{{row[9]}}</td> <!--Expr Date-->
+                <td>{{row[4]}}</td> <!--Donor-->
+                {% if row[10] == 1 %}
+                    <td>Yes</td> <!--Requested-->
+                {% else %}
+                    <td>No</td>
+                {% endif %}
+                <td>
+                    <form method="POST" action="{{ url_for('dashboard') }}" id="button">
+                    <button type="submit" value="{{row[0]}}" name="Button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+{% endblock %}

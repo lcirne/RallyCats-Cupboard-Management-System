@@ -1,5 +1,4 @@
-### Example user template template
-### Example user template
+# Example user template template
 
 # IntelliJ project files
 .idea
@@ -7,9 +6,6 @@
 out
 gen
 .venv
-<<<<<<< HEAD
-__pycache__/main.cpython-312.pyc
-data/__pycache__/UserDB.cpython-312.pyc
-=======
+__pycache__/*
+*/__pycache__/*
 .db
->>>>>>> 42a8a8c872271425d404f885cc335ec420df2c2c
